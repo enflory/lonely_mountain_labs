@@ -15,9 +15,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wider uppercase mb-6 border border-primary/20">
-            Digital Innovation
-          </span>
+          <h2 className="text-lg md:text-xl font-bold text-primary mb-6 tracking-wide">
+            Lonely Mountain Labs
+          </h2>
           
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground mb-6 leading-tight">
             Building the future, <br className="hidden md:block" />
