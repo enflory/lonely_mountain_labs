@@ -1,0 +1,30 @@
+import { Heart } from "lucide-react";
+
+export default function Footer() {
+  return (
+    <footer className="bg-background border-t border-border py-12">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <span className="text-xl font-bold text-primary tracking-tight">Lonely Mountain Labs</span>
+            <p className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()} Lonely Mountain Labs. All rights reserved.
+            </p>
+          </div>
+          
+          <div className="flex items-center gap-1 text-sm text-muted-foreground">
+            <span>Made with</span>
+            <Heart className="w-4 h-4 text-accent fill-accent" />
+            <span>and a sense of adventure.</span>
+          </div>
+          
+          <div className="flex gap-6">
+            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy</a>
+            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms</a>
+            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
