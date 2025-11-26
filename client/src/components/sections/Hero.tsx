@@ -15,16 +15,16 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h2 className="text-lg md:text-xl font-bold text-primary mb-6 tracking-wide">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-primary mb-6 leading-tight">
             Lonely Mountain Labs
-          </h2>
+          </h1>
           
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground mb-6 leading-tight">
+          <h2 className="text-lg md:text-xl font-medium tracking-tight text-foreground mb-6 leading-tight">
             Building the future, <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary bg-300% animate-gradient">
               one solution at a time.
             </span>
-          </h1>
+          </h2>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 font-body leading-relaxed">
             Lonely Mountain Labs is a digital foundry dedicated to crafting robust software solutions and exploring new frontiers in technology.
