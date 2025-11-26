@@ -7,25 +7,18 @@ import { Button } from "@/components/ui/button";
 export default function Projects() {
   const projects = [
     {
-      title: "Project Aether",
-      description: "Next-generation cloud infrastructure optimization tool helping teams reduce compute costs by up to 30% through intelligent resource scheduling.",
-      tags: ["Cloud", "AI", "Infrastructure"],
-      icon: <Database className="w-10 h-10 text-primary" />,
-      status: "Live"
-    },
-    {
-      title: "Streamline API",
-      description: "High-throughput data telemetry service providing real-time analytics and processing for high-volume applications.",
-      tags: ["API", "Big Data", "Real-time"],
-      icon: <Layers className="w-10 h-10 text-accent" />,
+      title: "Read Later",
+      description: "Save articles in one place and let AI handle the organization. Automatic summaries, smart categorization, and a clean space to keep your reading list manageable.",
+      tags: ["AI", "Content Curation", "Productivity"],
+      icon: <Layers className="w-10 h-10 text-primary" />,
       status: "In Development"
     },
     {
-      title: "Foundation UI",
-      description: "A robust, accessible component library designed for building data-heavy interfaces in challenging network environments.",
-      tags: ["React", "UI Kit", "Accessibility"],
-      icon: <Layout className="w-10 h-10 text-primary" />,
-      status: "Open Source"
+      title: "Project Legacy",
+      description: "AI-powered tools that help everyday writers craft memoirs with professional-grade editorial guidance. A new publishing stack built around authors, not gatekeepers.",
+      tags: ["AI", "Publishing", "Writing"],
+      icon: <Layout className="w-10 h-10 text-accent" />,
+      status: "In Development"
     }
   ];
 
