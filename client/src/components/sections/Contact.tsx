@@ -7,13 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-[-10%] left-[-5%] w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
-      </div>
-
+    <section id="contact" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div
@@ -22,14 +16,14 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start an Expedition?</h2>
-            <p className="text-lg text-primary-foreground/80 mb-8 font-body leading-relaxed max-w-md">
-              Whether you have a project in mind, want to collaborate, or just want to say hello, we're always open to new adventures.
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Let's Connect</h2>
+            <p className="text-lg text-muted-foreground mb-8 font-body leading-relaxed max-w-md">
+              Whether you have a project in mind, want to collaborate, or just want to say hello, we're always open to new opportunities.
             </p>
             
             <div className="flex flex-col gap-6">
-              <a href="mailto:hello@lonelymountain.labs" className="flex items-center gap-4 text-primary-foreground/90 hover:text-white transition-colors group">
-                <div className="p-3 bg-white/10 rounded-full group-hover:bg-white/20 transition-colors">
+              <a href="mailto:hello@lonelymountain.labs" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group">
+                <div className="p-3 bg-card border border-border rounded-full group-hover:border-primary/50 transition-colors">
                   <Mail className="w-5 h-5" />
                 </div>
                 <span className="text-lg">hello@lonelymountain.labs</span>
@@ -44,7 +38,7 @@ export default function Contact() {
                   <a 
                     key={index} 
                     href={social.href} 
-                    className="p-3 bg-white/10 rounded-full hover:bg-white/20 hover:scale-110 transition-all text-white"
+                    className="p-3 bg-card border border-border rounded-full hover:border-primary/50 hover:text-primary transition-all"
                     aria-label={social.label}
                   >
                     {social.icon}
@@ -60,31 +54,31 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Card className="bg-white/5 border-white/10 backdrop-blur-sm shadow-xl">
+            <Card className="bg-card/50 border-border/50 backdrop-blur-sm shadow-xl">
               <CardContent className="p-8">
                 <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <label htmlFor="first-name" className="text-sm font-medium text-primary-foreground/80">First Name</label>
-                      <Input id="first-name" placeholder="John" className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-secondary" />
+                      <label htmlFor="first-name" className="text-sm font-medium text-foreground/80">First Name</label>
+                      <Input id="first-name" placeholder="John" className="bg-background/50 border-border text-foreground placeholder:text-muted-foreground/50 focus-visible:ring-primary" />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="last-name" className="text-sm font-medium text-primary-foreground/80">Last Name</label>
-                      <Input id="last-name" placeholder="Doe" className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-secondary" />
+                      <label htmlFor="last-name" className="text-sm font-medium text-foreground/80">Last Name</label>
+                      <Input id="last-name" placeholder="Doe" className="bg-background/50 border-border text-foreground placeholder:text-muted-foreground/50 focus-visible:ring-primary" />
                     </div>
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium text-primary-foreground/80">Email</label>
-                    <Input id="email" type="email" placeholder="john@example.com" className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-secondary" />
+                    <label htmlFor="email" className="text-sm font-medium text-foreground/80">Email</label>
+                    <Input id="email" type="email" placeholder="john@example.com" className="bg-background/50 border-border text-foreground placeholder:text-muted-foreground/50 focus-visible:ring-primary" />
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium text-primary-foreground/80">Message</label>
-                    <Textarea id="message" placeholder="Tell us about your project..." className="min-h-[120px] bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-secondary" />
+                    <label htmlFor="message" className="text-sm font-medium text-foreground/80">Message</label>
+                    <Textarea id="message" placeholder="Tell us about your project..." className="min-h-[120px] bg-background/50 border-border text-foreground placeholder:text-muted-foreground/50 focus-visible:ring-primary" />
                   </div>
                   
-                  <Button type="submit" className="w-full bg-secondary hover:bg-secondary/90 text-white font-semibold mt-2">
+                  <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold mt-2">
                     Send Message <Send className="w-4 h-4 ml-2" />
                   </Button>
                 </form>

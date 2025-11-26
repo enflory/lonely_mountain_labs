@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@assets/generated_images/minimalist_geometric_mountain_wireframe_background.png";
 
 export default function Hero() {
   const scrollToAbout = () => {
@@ -9,31 +8,21 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-20">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background z-10" />
-        <img 
-          src={heroBg} 
-          alt="Abstract Mountain Landscape" 
-          className="w-full h-full object-cover opacity-40"
-        />
-      </div>
-
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div className="container mx-auto px-6 relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <span className="inline-block py-1 px-3 rounded-full bg-secondary/10 text-secondary text-xs font-bold tracking-wider uppercase mb-6 border border-secondary/20">
-            Innovation from the Summit
+          <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wider uppercase mb-6 border border-primary/20">
+            Digital Innovation
           </span>
           
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-primary mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground mb-6 leading-tight">
             Building the future, <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-300% animate-gradient">
-              one peak at a time.
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary bg-300% animate-gradient">
+              one solution at a time.
             </span>
           </h1>
           
@@ -45,7 +34,7 @@ export default function Hero() {
             <Button size="lg" className="min-w-[160px] text-base" onClick={scrollToAbout}>
               Explore Our Vision
             </Button>
-            <Button variant="outline" size="lg" className="min-w-[160px] text-base bg-white/50 backdrop-blur-sm" onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}>
+            <Button variant="outline" size="lg" className="min-w-[160px] text-base bg-background/50 backdrop-blur-sm hover:bg-background/80" onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}>
               View Projects
             </Button>
           </div>
