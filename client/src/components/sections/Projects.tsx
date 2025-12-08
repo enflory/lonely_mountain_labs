@@ -19,6 +19,13 @@ export default function Projects() {
       tags: ["AI", "Publishing", "Writing"],
       icon: <Layout className="w-10 h-10 text-accent" />,
       status: "In Development"
+    },
+    {
+      title: "Giftwise",
+      description: "Giftwise helps you stop scrambling for last-minute gift ideas by tracking what you've given and keeping upcoming events organized. It's a simple tool that makes gift-giving thoughtful, stress-free, and impossible to repeat yourself.",
+      tags: ["Productivity", "Social", "Organization"],
+      icon: <Database className="w-10 h-10 text-primary" />,
+      status: "In Development"
     }
   ];
 
