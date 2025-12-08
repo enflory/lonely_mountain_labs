@@ -4,7 +4,7 @@ import About from "@/components/sections/About";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
-import heroBg from "@assets/generated_images/minimalist_geometric_mountain_wireframe_background.png";
+import heroBg from "@assets/generated_images/minimalist_dark_topographic_contour_lines_background.png";
 
 export default function Home() {
   return (
