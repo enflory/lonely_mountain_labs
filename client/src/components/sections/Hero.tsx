@@ -21,7 +21,10 @@ export default function Hero() {
           
           <h2 className="text-lg md:text-xl font-medium tracking-tight text-foreground mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary bg-300% animate-gradient">
-              Tools that make the important things easier to keep.
+              Tools that make the important things
+            </span>{" "}
+            <span className="text-foreground">
+              easier to keep.
             </span>
           </h2>
           
