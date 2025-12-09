@@ -12,13 +12,13 @@ export default function Home() {
       {/* Fixed Background with Overlay */}
       <div className="fixed inset-0 z-0">
         {/* Gradient Overlay for readability */}
-        <div className="absolute inset-0 bg-background/90 z-10" />
+        <div className="absolute inset-0 bg-background/85 z-10" />
         
         {/* Background Image */}
         <img 
           src={heroBg} 
           alt="Abstract Background" 
-          className="w-full h-full object-cover opacity-20 invert"
+          className="w-full h-full object-cover opacity-40 invert"
         />
       </div>
 
