@@ -24,9 +24,14 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p className="text-lg text-muted-foreground font-body leading-relaxed">
-              Lonely Mountain Labs serves as the central hub for our diverse portfolio of digital ventures. We believe that great software stands the test of time. Our mission is to design and develop applications that are not only functional but also intuitive, robust, and beautiful. Whether it's internal tooling, open-source contributions, or commercial products, we bring the same level of craft to everything we touch.
-            </p>
+            <div className="space-y-6 text-lg text-muted-foreground font-body leading-relaxed">
+              <p>
+                Lonely Mountain Labs builds purposeful tools that help people hold onto what matters, whether that’s preserving a life story or simply keeping track of the details that tend to slip away.
+              </p>
+              <p>
+                It’s an outpost for exploring what becomes possible when AI does the heavy lifting, leaving people with more space for what brings meaning and joy. Some projects are experiments, others may grow into something larger, but they’re all driven by the same principle: make the important things easier to keep.
+              </p>
+            </div>
           </motion.div>
         </div>
       </div>
