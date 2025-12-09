@@ -4,7 +4,7 @@ import About from "@/components/sections/About";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
-import heroBg from "@assets/image_1765303581087.png";
+import heroBg from "@assets/image_1765303987180.png";
 
 export default function Home() {
   return (
