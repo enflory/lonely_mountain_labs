@@ -20,14 +20,13 @@ export default function Hero() {
           </h1>
           
           <h2 className="text-lg md:text-xl font-medium tracking-tight text-foreground mb-6 leading-tight">
-            Building the future, <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary bg-300% animate-gradient">
-              one solution at a time.
+              Tools that make the important things easier to keep.
             </span>
           </h2>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 font-body leading-relaxed">
-            Lonely Mountain Labs is a digital foundry dedicated to crafting robust software solutions and exploring new frontiers in technology.
+            Lonely Mountain Labs is an outpost experimenting with ways technology can give people more space for what matters.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
