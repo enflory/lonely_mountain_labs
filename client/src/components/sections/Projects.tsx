@@ -39,9 +39,9 @@ export default function Projects() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Selected Works</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">In the Lab</h2>
           <p className="text-lg text-muted-foreground font-body">
-            A showcase of our current ventures, open-source contributions, and experimental prototypes.
+            A look at what we’re building.
           </p>
         </motion.div>
 
