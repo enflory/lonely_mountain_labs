@@ -73,7 +73,7 @@ export default function Projects() {
                 {project.title !== "Project Legacy" && (
                   <CardFooter className="pt-2">
                     <Button variant="ghost" className="w-full justify-between group-hover:text-primary hover:bg-primary/5">
-                      View Details <ArrowUpRight className="w-4 h-4 ml-2 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+                      Explore <ArrowUpRight className="w-4 h-4 ml-2 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
                     </Button>
                   </CardFooter>
                 )}
