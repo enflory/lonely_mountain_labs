@@ -7,24 +7,21 @@ import { Button } from "@/components/ui/button";
 export default function Projects() {
   const projects = [
     {
-      title: "Read Later",
-      description: "Save articles in one place and let AI handle the organization. Automatic summaries, smart categorization, and a clean space to keep your reading list manageable.",
-      tags: ["AI", "Content Curation", "Productivity"],
-      icon: <Layers className="w-10 h-10 text-primary" />,
-      status: "In Development"
-    },
-    {
       title: "Project Legacy",
       description: "AI-powered tools that help everyday writers craft memoirs with professional-grade editorial guidance. A new publishing stack built around authors, not gatekeepers.",
-      tags: ["AI", "Publishing", "Writing"],
       icon: <Layout className="w-10 h-10 text-accent" />,
       status: "In Development"
     },
     {
       title: "Giftwise",
       description: "Giftwise helps you stop scrambling for last-minute gift ideas by tracking what you've given and keeping upcoming events organized. It's a simple tool that makes gift-giving thoughtful, stress-free, and impossible to repeat yourself.",
-      tags: ["Productivity", "Social", "Organization"],
       icon: <Database className="w-10 h-10 text-primary" />,
+      status: "In Development"
+    },
+    {
+      title: "Read Later",
+      description: "Save articles in one place and let AI handle the organization. Automatic summaries, smart categorization, and a clean space to keep your reading list manageable.",
+      icon: <Layers className="w-10 h-10 text-primary" />,
       status: "In Development"
     }
   ];
@@ -72,13 +69,6 @@ export default function Projects() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="mt-auto">
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded-md font-medium">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
                 </CardContent>
                 <CardFooter className="pt-2">
                   <Button variant="ghost" className="w-full justify-between group-hover:text-primary hover:bg-primary/5">
