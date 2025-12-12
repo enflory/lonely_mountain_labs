@@ -14,7 +14,7 @@ export default function Contact() {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Let's Connect</h2>
             <p className="text-lg text-muted-foreground mb-8 font-body leading-relaxed">
-              Whether you have a project in mind, want to collaborate, or just want to say hello, we're always open to new opportunities.
+              Have a question or idea? Feel free to reach out.
             </p>
             
             <div className="flex justify-center">
