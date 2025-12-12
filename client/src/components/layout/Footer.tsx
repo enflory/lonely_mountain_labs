@@ -13,9 +13,7 @@ export default function Footer() {
           </div>
           
           <div className="flex items-center gap-1 text-sm text-muted-foreground">
-            <span>Made with</span>
-            <Heart className="w-4 h-4 text-accent fill-accent" />
-            <span>and a sense of adventure.</span>
+            <span>Built with curiousity, guided by mistakes.</span>
           </div>
         </div>
       </div>
