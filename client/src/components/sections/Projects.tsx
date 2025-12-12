@@ -10,19 +10,22 @@ export default function Projects() {
       title: "Project Legacy",
       description: "AI-powered tools that help everyday writers craft memoirs with professional-grade editorial guidance. A new publishing stack built around authors, not gatekeepers.",
       icon: <Layout className="w-10 h-10 text-accent" />,
-      status: "In Development"
+      status: "In Development",
+      link: null
     },
     {
       title: "Giftwise",
       description: "Giftwise helps you stop scrambling for last-minute gift ideas by tracking what you've given and keeping upcoming events organized. It's a simple tool that makes gift-giving thoughtful, stress-free, and impossible to repeat yourself.",
       icon: <Database className="w-10 h-10 text-primary" />,
-      status: "Beta"
+      status: "Beta",
+      link: "https://giftwise.lonelymtnlabs.com"
     },
     {
       title: "Read Later",
       description: "Save articles in one place and let AI handle the organization. Automatic summaries, smart categorization, and a clean space to keep your reading list manageable.",
       icon: <Layers className="w-10 h-10 text-primary" />,
-      status: "Beta"
+      status: "Beta",
+      link: "https://read-later.lonelymtnlabs.com"
     }
   ];
 
@@ -70,10 +73,16 @@ export default function Projects() {
                 </CardHeader>
                 <CardContent className="mt-auto">
                 </CardContent>
-                {project.title !== "Project Legacy" && (
+                {project.link && (
                   <CardFooter className="pt-2">
-                    <Button variant="ghost" className="w-full justify-between group-hover:text-primary hover:bg-primary/5">
-                      Explore <ArrowUpRight className="w-4 h-4 ml-2 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+                    <Button 
+                      variant="ghost" 
+                      className="w-full justify-between group-hover:text-primary hover:bg-primary/5 p-0 h-auto"
+                      asChild
+                    >
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center w-full px-4 py-2">
+                        Explore <ArrowUpRight className="w-4 h-4 ml-auto transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+                      </a>
                     </Button>
                   </CardFooter>
                 )}
