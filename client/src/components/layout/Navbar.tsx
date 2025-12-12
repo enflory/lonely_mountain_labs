@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Mountain } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -40,7 +40,7 @@ export default function Navbar() {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link href="/">
           <a className="text-2xl font-bold text-primary tracking-tight flex items-center gap-2">
-            <span className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-mono text-lg">L</span>
+            <Mountain className="w-8 h-8 text-primary" />
             Lonely Mountain Labs
           </a>
         </Link>
