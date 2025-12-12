@@ -56,9 +56,6 @@ export default function Navbar() {
               {link.name}
             </button>
           ))}
-          <Button variant="default" size="sm" className="font-semibold" onClick={() => scrollToSection("#contact")}>
-            Get in Touch
-          </Button>
         </div>
 
         {/* Mobile Toggle */}
@@ -82,9 +79,6 @@ export default function Navbar() {
               {link.name}
             </button>
           ))}
-          <Button className="w-full mt-2" onClick={() => scrollToSection("#contact")}>
-            Get in Touch
-          </Button>
         </div>
       )}
     </nav>
