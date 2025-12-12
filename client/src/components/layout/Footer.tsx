@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start gap-2">
             <span className="text-xl font-bold text-primary tracking-tight">Lonely Mountain Labs</span>
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Lonely Mountain Labs. All rights reserved.
+              © 2025 Ethan Flory — Lonely Mountain Labs
             </p>
           </div>
           
@@ -16,12 +16,6 @@ export default function Footer() {
             <span>Made with</span>
             <Heart className="w-4 h-4 text-accent fill-accent" />
             <span>and a sense of adventure.</span>
-          </div>
-          
-          <div className="flex gap-6">
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy</a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms</a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Sitemap</a>
           </div>
         </div>
       </div>
