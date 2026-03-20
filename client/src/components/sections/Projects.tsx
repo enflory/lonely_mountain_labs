@@ -14,16 +14,16 @@ export default function Projects() {
       link: "https://github.com/enflory/hush"
     },
     {
-      title: "Project Legacy",
-      description: "AI-powered tools that help everyday writers craft memoirs with professional-grade editorial guidance. A new publishing stack built around authors, not gatekeepers.",
-      icon: <Layout className="w-10 h-10 text-accent" />,
+      title: "Career Interviewer",
+      description: "A voice-powered AI interviewer that walks you through a structured career reflection, capturing your experience across six key areas and producing polished written summaries you can use for resumes, bios, or self-reflection.",
+      icon: <Mic className="w-10 h-10 text-primary" />,
       status: "In Development",
       link: null
     },
     {
-      title: "Career Interviewer",
-      description: "A voice-powered AI interviewer that walks you through a structured career reflection, capturing your experience across six key areas and producing polished written summaries you can use for resumes, bios, or self-reflection.",
-      icon: <Mic className="w-10 h-10 text-primary" />,
+      title: "Project Legacy",
+      description: "AI-powered tools that help everyday writers craft memoirs with professional-grade editorial guidance. A new publishing stack built around authors, not gatekeepers.",
+      icon: <Layout className="w-10 h-10 text-accent" />,
       status: "In Development",
       link: null
     },
