@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Layers, Database, Layout } from "lucide-react";
+import { ArrowUpRight, Layers, Database, Layout, Volume2, Mic } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -7,9 +7,23 @@ import { Button } from "@/components/ui/button";
 export default function Projects() {
   const projects = [
     {
+      title: "Hush",
+      description: "A lightweight macOS menu bar app that automatically reduces your system volume during Spotify ads and restores it when music resumes. No muting tricks — just a smooth fade that keeps the ads out of your head.",
+      icon: <Volume2 className="w-10 h-10 text-primary" />,
+      status: "Live",
+      link: "https://github.com/enflory/hush"
+    },
+    {
       title: "Project Legacy",
       description: "AI-powered tools that help everyday writers craft memoirs with professional-grade editorial guidance. A new publishing stack built around authors, not gatekeepers.",
       icon: <Layout className="w-10 h-10 text-accent" />,
+      status: "In Development",
+      link: null
+    },
+    {
+      title: "Career Interviewer",
+      description: "A voice-powered AI interviewer that walks you through a structured career reflection, capturing your experience across six key areas and producing polished written summaries you can use for resumes, bios, or self-reflection.",
+      icon: <Mic className="w-10 h-10 text-primary" />,
       status: "In Development",
       link: null
     },
