@@ -8,7 +8,7 @@ export default function Projects() {
   const projects = [
     {
       title: "Hush",
-      description: "A lightweight macOS menu bar app that automatically reduces your system volume during Spotify ads and restores it when music resumes. No muting tricks — just a smooth fade that keeps the ads out of your head.",
+      description: "A lightweight macOS menu bar app that automatically reduces your system volume during Spotify ads and restores it when music resumes. Unlike muting, which Spotify detects and pauses playback, Hush lowers the volume just enough to keep ads out of your head.",
       icon: <Volume2 className="w-10 h-10 text-primary" />,
       status: "Live",
       link: "https://github.com/enflory/hush"
