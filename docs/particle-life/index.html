@@ -21,11 +21,43 @@
     font-size: 13px;
     min-width: 220px;
     z-index: 10;
-    transition: opacity 0.3s;
+    transition: all 0.3s ease;
+  }
+  #controls.collapsed {
+    padding: 0;
+    min-width: auto;
+    background: transparent;
+    backdrop-filter: none;
+    border-color: transparent;
+  }
+  #controls.collapsed .controls-body { display: none; }
+  #toggle-btn {
+    position: absolute; top: 12px; right: 12px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px;
+    color: #ccc;
+    width: 28px; height: 28px;
+    cursor: pointer; font-size: 16px;
+    display: flex; align-items: center; justify-content: center;
+    padding: 0; margin: 0;
+    transition: background 0.2s;
+    z-index: 11;
+  }
+  #toggle-btn:hover { background: rgba(255,255,255,0.2); }
+  #controls.collapsed #toggle-btn {
+    position: static;
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: rgba(10, 10, 20, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.08);
+    font-size: 20px;
   }
   #controls h2 {
     font-size: 16px; font-weight: 600; color: #fff;
     margin-bottom: 14px; letter-spacing: 0.5px;
+    padding-right: 32px;
   }
   .control-row {
     display: flex; justify-content: space-between; align-items: center;
@@ -79,6 +111,8 @@
 <body>
 <canvas id="canvas"></canvas>
 <div id="controls">
+  <button id="toggle-btn" title="Toggle menu">×</button>
+  <div class="controls-body">
   <h2>Particle Life</h2>
   <div class="control-row">
     <label>Particles</label>
@@ -110,6 +144,7 @@
   <div id="matrix-display">
     <h3>Interaction Matrix</h3>
     <table id="matrixTable"></table>
+  </div>
   </div>
 </div>
 <div id="fps"></div>
@@ -358,6 +393,20 @@ forceSlider.oninput = () => {
 
 document.getElementById('randomizeBtn').onclick = () => { randomMatrix(); };
 document.getElementById('resetBtn').onclick = () => { initParticles(); };
+
+// Toggle menu
+const toggleBtn = document.getElementById('toggle-btn');
+const controls = document.getElementById('controls');
+toggleBtn.onclick = () => {
+  controls.classList.toggle('collapsed');
+  toggleBtn.textContent = controls.classList.contains('collapsed') ? '☰' : '×';
+};
+
+// Auto-collapse on small screens
+if (window.innerWidth < 600) {
+  controls.classList.add('collapsed');
+  toggleBtn.textContent = '☰';
+}
 
 // Fade hint
 setTimeout(() => {
