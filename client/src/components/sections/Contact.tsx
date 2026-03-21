@@ -18,11 +18,11 @@ export default function Contact() {
             </p>
             
             <div className="flex justify-center">
-              <a href="mailto:hello@lonelymtnlabs.com" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group">
+              <a href="mailto:ethan@lonelymtnlabs.com" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group">
                 <div className="p-3 bg-card border border-border rounded-full group-hover:border-primary/50 transition-colors">
                   <Mail className="w-5 h-5" />
                 </div>
-                <span className="text-lg">hello@lonelymtnlabs.com</span>
+                <span className="text-lg">ethan@lonelymtnlabs.com</span>
               </a>
             </div>
           </motion.div>
