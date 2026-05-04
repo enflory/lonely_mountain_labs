@@ -6,13 +6,18 @@ The website for [Lonely Mountain Labs](https://lonelymtnlabs.com) — an outpost
 
 This repo contains two things:
 
-1. **The main website** — a React + Vite single-page site showcasing Lonely Mountain Labs and its projects (Project Legacy, Giftwise, Particle Life).
+1. **The main website** — a React + Vite single-page site showcasing Lonely Mountain Labs and its projects (Hush, Ingolmo, Project Legacy, Career Interviewer, Particle Life).
 2. **Particle Life** — an interactive artificial life simulation hosted at [lonelymtnlabs.com/particle-life](https://lonelymtnlabs.com/particle-life). It's a standalone HTML/JS project that lives in `docs/particle-life/`.
+
+## Design
+
+The site uses a "Field Notes" editorial theme — warm cream paper background, deep ink text, and an ember accent color. Typography pairs Newsreader (serif headlines), Inter (body), and JetBrains Mono (meta labels). A Mt Hood SVG illustration sits as a subtle parallax backdrop behind the hero, and each project card includes an animated mini-visual.
 
 ## Project Structure
 
 ```
 ├── client/                  # React frontend source
+│   ├── public/assets/       # Static assets (Mt Hood SVG)
 │   ├── src/
 │   │   ├── components/      # UI components and page sections
 │   │   ├── pages/           # Route pages (Home, 404)
@@ -31,8 +36,6 @@ This repo contains two things:
 The site is hosted via **GitHub Pages**, served from the `docs/` directory on the `main` branch with a custom domain (`lonelymtnlabs.com`) managed through Squarespace DNS.
 
 ## Development
-
-The site was originally built on Replit using React, Vite, Tailwind CSS, and Framer Motion.
 
 To run locally:
 
