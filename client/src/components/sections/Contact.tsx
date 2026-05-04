@@ -1,33 +1,39 @@
-import { motion } from "framer-motion";
-import { Mail } from "lucide-react";
-
 export default function Contact() {
+  const accent = "#9c6b3a";
+
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Let's Connect</h2>
-            <p className="text-lg text-muted-foreground mb-8 font-body leading-relaxed">
-              Have a question or idea? Feel free to reach out.
-            </p>
-            
-            <div className="flex justify-center">
-              <a href="mailto:ethan@lonelymtnlabs.com" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group">
-                <div className="p-3 bg-card border border-border rounded-full group-hover:border-primary/50 transition-colors">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <span className="text-lg">ethan@lonelymtnlabs.com</span>
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+    <section
+      id="contact"
+      className="text-center"
+      style={{ padding: "80px 56px", borderTop: "1px solid #d4c9af" }}
+    >
+      <h2
+        className="font-serif m-0 mb-3.5"
+        style={{
+          fontWeight: 400,
+          fontSize: "clamp(32px, 4vw, 48px)",
+          letterSpacing: "-0.02em",
+        }}
+      >
+        Drop a line.
+      </h2>
+      <p
+        className="font-serif italic text-lg m-0 mb-7"
+        style={{ color: "#3a3a35" }}
+      >
+        A question, an idea, or just a hello.
+      </p>
+      <a
+        href="mailto:ethan@lonelymtnlabs.com"
+        className="font-serif text-[22px] no-underline"
+        style={{
+          color: "#1c1d1a",
+          borderBottom: `1px solid ${accent}`,
+          paddingBottom: 2,
+        }}
+      >
+        ethan@lonelymtnlabs.com
+      </a>
     </section>
   );
 }
