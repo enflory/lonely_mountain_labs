@@ -6,7 +6,9 @@ This is the Lonely Mountain Labs website — a portfolio/landing page for person
 
 ## Tech Stack
 
-- **Frontend:** React 19, TypeScript, Vite 7, Tailwind CSS 4, Framer Motion
+- **Frontend:** React 19, TypeScript, Vite 7, Tailwind CSS 4
+- **Typography:** Newsreader (serif), Inter (sans), JetBrains Mono (mono)
+- **Design:** "Field Notes" editorial theme — cream paper, deep ink, ember accent (#9c6b3a)
 - **UI Components:** Radix UI primitives with shadcn/ui patterns
 - **Routing:** Wouter
 - **Hosting:** GitHub Pages (static), served from `docs/` on `main` branch
@@ -14,7 +16,7 @@ This is the Lonely Mountain Labs website — a portfolio/landing page for person
 
 ## Key Directories
 
-- `client/src/components/sections/` — main page sections (Hero, About, Projects, Contact)
+- `client/src/components/sections/` — main page sections (Hero, Projects, Contact, ProjectVisuals)
 - `client/src/components/layout/` — Navbar and Footer
 - `client/src/components/ui/` — reusable UI primitives (shadcn/ui)
 - `docs/` — built static output deployed by GitHub Pages
@@ -35,3 +37,7 @@ cp -r dist/public/* docs/                # copy to GitHub Pages dir
 - Particle Life (`docs/particle-life/index.html`) is a standalone file — edit it directly, no build step needed.
 - The `server/` directory and database config (`drizzle.config.ts`) are artifacts from the original Replit full-stack setup. They are not used for the current static deployment.
 - The Replit-specific Vite plugins are conditionally loaded and only activate in a Replit environment.
+- The About section has been folded into the Projects section as an intro block. There is no standalone About component.
+- `client/public/assets/mt_hood_clean.svg` — Mt Hood illustration used as the hero backdrop.
+- `ProjectVisuals.tsx` contains animated mini-visual components rendered inside each project card (volume bar, voice waveform, manuscript pages, knowledge index, particle canvas).
+- Framer Motion is still a dependency but is no longer used in the current components. It can be removed if desired.
