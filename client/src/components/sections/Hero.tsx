@@ -1,62 +1,101 @@
-import { motion } from "framer-motion";
-import { ArrowDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
 
 export default function Hero() {
-  const scrollToAbout = () => {
-    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-  };
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      <div className="container mx-auto px-6 relative z-10 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-primary mb-6 leading-tight">
-            Lonely Mountain Labs
-          </h1>
-          
-          <h2 className="text-lg md:text-xl font-medium tracking-tight text-foreground mb-6 leading-tight">
-            <span className="text-foreground">
-              Tools that make the important things
-            </span>{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary bg-300% animate-gradient">
-              easier to keep.
-            </span>
-          </h2>
-          
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 font-body leading-relaxed">
-            Lonely Mountain Labs is an outpost experimenting with ways technology can give people more space for what matters.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="min-w-[160px] text-base" onClick={scrollToAbout}>
-              Explore Our Vision
-            </Button>
-            <Button variant="outline" size="lg" className="min-w-[160px] text-base bg-background/50 backdrop-blur-sm hover:bg-background/80" onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}>
-              View Projects
-            </Button>
-          </div>
-        </motion.div>
+    <section className="relative overflow-hidden" style={{ padding: "60px 56px 100px" }}>
+      {/* Mountain backdrop */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          left: "50%",
+          top: "52%",
+          width: "110%",
+          transform: `translate(-50%, -50%) translateY(${scrollY * 0.08}px)`,
+          willChange: "transform",
+          zIndex: 0,
+        }}
+      >
+        <img
+          src="/assets/mt_hood_clean.svg"
+          alt=""
+          className="w-full h-auto block"
+          style={{
+            opacity: 0,
+            animation: "fnMountainFade 1.6s ease-out 0.3s forwards",
+          }}
+        />
       </div>
 
-      <motion.div 
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
+      {/* Top meta line */}
+      <div
+        className="fn-anim-1 relative z-[1] flex flex-col sm:flex-row justify-between font-mono text-[11px] text-muted-foreground uppercase"
+        style={{ letterSpacing: "0.12em", marginBottom: 80 }}
       >
-        <button 
-          onClick={scrollToAbout}
-          className="text-muted-foreground hover:text-primary transition-colors p-2 animate-bounce"
-          aria-label="Scroll down"
+        <span>
+          <span className="text-accent">N&deg; 001</span> &mdash; Field Notes
+        </span>
+        <span>45.3736&deg; N, 121.6960&deg; W</span>
+        <span>Est. Portland, OR</span>
+      </div>
+
+      <div className="relative z-[1] pb-[60px]" style={{ maxWidth: 760 }}>
+        <h1
+          className="fn-anim-2 font-serif"
+          style={{
+            fontWeight: 400,
+            fontSize: "clamp(48px, 7vw, 88px)",
+            lineHeight: 0.95,
+            letterSpacing: "-0.025em",
+            margin: 0,
+          }}
         >
-          <ArrowDown size={24} />
-        </button>
-      </motion.div>
+          Tools that make<br />
+          <span className="italic font-light text-accent">the important things</span>
+          <br />
+          easier to keep.
+        </h1>
+
+        <div className="fn-anim-3 flex flex-wrap gap-3.5 mt-9">
+          <a
+            href="#projects"
+            className="inline-block rounded-sm text-[13px] font-medium no-underline"
+            style={{
+              padding: "12px 22px",
+              background: "#1c1d1a",
+              color: "#f4efe4",
+              letterSpacing: "0.02em",
+            }}
+          >
+            See what's in the lab &rarr;
+          </a>
+          <a
+            href="https://github.com/enflory"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-sm text-[13px] font-medium no-underline"
+            style={{
+              padding: "12px 22px",
+              background: "transparent",
+              color: "#1c1d1a",
+              letterSpacing: "0.02em",
+              border: "1px solid #1c1d1a44",
+            }}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.3-3.2-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3" />
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
     </section>
   );
 }
