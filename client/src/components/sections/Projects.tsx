@@ -67,11 +67,10 @@ export default function Projects() {
   const accent = "#9c6b3a";
 
   return (
-    <section id="projects" style={{ padding: "80px 56px 80px" }}>
+    <section id="projects" className="px-5 md:px-14" style={{ paddingTop: "80px", paddingBottom: "80px" }}>
       {/* About the lab — combined intro */}
       <div
-        className="grid gap-12 mb-0 pb-14"
-        style={{ gridTemplateColumns: "180px 1fr" }}
+        className="grid gap-4 md:gap-12 mb-0 pb-14 md:[grid-template-columns:180px_1fr]"
       >
         <div
           className="font-mono text-[10px] text-muted-foreground uppercase flex items-baseline gap-2.5 pt-2"
@@ -103,13 +102,12 @@ export default function Projects() {
 
       {/* Section divider */}
       <div
-        className="flex justify-between font-mono text-[10px] text-muted-foreground uppercase mb-16"
+        className="flex justify-between font-mono text-[10px] text-muted-foreground uppercase mb-16 -mx-5 md:-mx-14 px-5 md:px-14"
         style={{
-          marginLeft: -56,
-          marginRight: -56,
           borderTop: "1px solid #d4c9af",
           borderBottom: "1px solid #d4c9af",
-          padding: "12px 56px",
+          paddingTop: 12,
+          paddingBottom: 12,
           letterSpacing: "0.18em",
         }}
       >
